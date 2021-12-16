@@ -348,7 +348,11 @@ main {
 /*---------FOR WHO / READ MORE BUTTON--------*/
 
 .forWhoWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-top: 15px;
+    padding-bottom: 20px;
 }
 
 .forWho p {
@@ -427,16 +431,6 @@ main {
     width: 100%;
 }
 
-.citWrapImgWrap {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 10%;
-    left: 40%;
-    z-index: -2;
-}
-
 .recommendation p {
     display: flex;
     flex-direction: column;
@@ -471,7 +465,7 @@ main {
 #news1 h3, 
 #news2 h3, 
 #news3 h3 {
-    padding: 0px 15px 0px 15px;
+    padding: 0px 15px 10px 15px;
 }
 
 #news1 p,
@@ -720,6 +714,7 @@ main {
 
     .circleWrap img {
         width: 100%;
+        padding-top: 20px;
     }
 
     /* --- SECTION SOCIAL PROOFING MD -- */
@@ -872,6 +867,8 @@ main {
             display: flex;
             justify-content: center;
             width: 100vw;
+            padding-left: 50px;
+            padding-right: 30px;
             position: absolute; 
         }
 
@@ -986,19 +983,30 @@ main {
             padding-bottom: 15px;
         }
 
-        /* ----ARTICLE NEWS LD ------- */
-
-        #news1,
-        #news2 {
-            margin-right: 30px;
-        }
-
         /* -----SOCIAL PROOFING LD---- */
+
+        .recommendation {
+            padding-left: 0;
+            padding-right: 0;
+        }
 
         .citWrap p {
             padding-left: 100px;
             padding-right: 100px;
         }
+
+        /* ----ARTICLE NEWS LD ------- */
+
+        .news {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        #news1,
+        #news2 {
+            margin-right: 30px;
+        }
+
+    
         /* --------- RIDER LD----------*/
 
         #riderImgWrap {
