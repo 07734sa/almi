@@ -1,5 +1,3 @@
-
-
 const mainNavEl = document.querySelectorAll('.mainNav');
 
 const mainNavDropEl = document.querySelector('.mainNavDrop');
@@ -11,8 +9,6 @@ const aTwoWrapEl = document.querySelector('.aTwoWrap');
 
 const aThreeEl = document.querySelector('.aThree');
 const aThreeWrapEl = document.querySelector('.aThreeWrap');
-
-const body = document.querySelector('BODY');
 
 
 function burgerFunction() {
@@ -48,7 +44,8 @@ mainNavEl.forEach(link => {
 
         }   else if (e.target !== aThreeEl) {
             aThreeWrapEl.classList.remove('show');
-
         } 
     })
+
+
 });

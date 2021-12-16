@@ -26,8 +26,8 @@ a:hover {
 
 h1 {font-size: 30px;}
 h2 {font-size: 25px; letter-spacing: 1px; font-weight: normal; padding-bottom: 10px;}
-h3 {font-size: 16px; letter-spacing: 1px; padding-bottom: 10px; line-height: 1.5;}
-span {font-size: 12px;}
+h3 {font-size: 16px; letter-spacing: 1px; padding-bottom: 5px; line-height: 1.5;}
+span {font-size: 14px;}
 p{font-size: 14px;}
 
 li {list-style-type: none; letter-spacing: 1px;}
@@ -227,7 +227,7 @@ button:hover {
      padding-left: 15px;
      padding-right: 15px;
      color: white;
-     background-color: rgba(0, 0, 0, 0.500);
+     background-color: rgba(0, 0, 0, 0.300);
      z-index: 2222;
  }
 
@@ -324,14 +324,13 @@ main {
 }
 
 .usps ul {
-    padding-left: 15px;
     height: 140px;
 }
 
 .usps ul li {
     display: flex;
     height: 30%;
-    padding: 10px;
+    padding: 10px 20px;
     
 }
 .usps ul li + img{
@@ -368,7 +367,7 @@ main {
 
 .readMoreButton {
     width: 150px;
-    padding-top: 15px;
+    padding-top: 12px;
 }
 
 /*---------------- SECTION SOCIAL PROOFING ------------*/
@@ -453,13 +452,13 @@ main {
 #news2,
 #news3 {
     background-color: #f2f2f2;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 #news1 h3, #news1 p,
 #news2 h3, #news2 p,
 #news3 h3, #news3 p {
-    padding: 0px 15px 15px;
+    padding: 0px 15px 0px 15px;
 }
 
 .newsImgWrap {
@@ -483,7 +482,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
     position: relative;
 }
 
@@ -503,7 +501,7 @@ main {
     align-items: center;
     padding: 15px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.500);
+    background-color: rgba(0, 0, 0, 0.400);
     position: absolute;
 }
 .applyForLoan p {
@@ -750,7 +748,7 @@ main {
         width: 33%;
         padding: 30px;
     }
-
+   
     #news1,
     #news2 {
         margin-right: 10px;
@@ -869,7 +867,7 @@ main {
             display: flex;
             justify-content: space-around;
             width: 100%;
-            max-width: 1200px;
+            max-width: 1317px;
             padding: 30px;
             line-height: 1.5;
             background-color: #870AA0;
