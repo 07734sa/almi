@@ -1,0 +1,995 @@
+
+/*----- MAIN RULES ------*/
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.infoWrap a {
+    color: white;
+}
+
+h1 {font-size: 30px;}
+h2 {font-size: 25px; letter-spacing: 1px; font-weight: normal; padding-bottom: 10px;}
+h3 {font-size: 16px; letter-spacing: 1px; padding-bottom: 10px; line-height: 1.5;}
+span {font-size: 12px;}
+p{font-size: 14px;}
+
+li {list-style-type: none; letter-spacing: 1px;}
+ul {padding: 0;}
+
+p {
+    line-height: 1.5;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/*-----------------------------------------*/
+
+/*---------------HEADER--------------------*/
+ header {
+     height: 90px;
+     width: 100vw;
+     background-color: #f2f2f2;;
+     position: sticky;
+     top: 0;
+     z-index: 9999;
+ }
+
+ .headWrap {
+     display: flex;
+     align-items: center;
+     width: 100%;
+     height: 100%;
+     padding: 0px 20px;
+ }
+ 
+ /*----------- LOGO ------------*/
+
+ .logoWrap {
+     height: 70px;
+     width: 35%; 
+ }
+
+.logoWrap > a img {
+    height: 100%;
+    padding: 15px 0px;
+}
+
+ /*------ HEADER LINKS --------*/
+
+ .headerLinks {
+     display: flex;
+     align-items: center;
+     width: 55%;
+     height: 100%;
+ }
+
+ .search {
+     justify-content: center;
+     flex-direction: row;
+     width: 100%;
+ }
+
+ .english { /*In English link*/
+     display: none;
+ }
+
+ .headerLinks a {
+    font-size: 18px;
+    text-align: end;
+    width: 100%;
+}
+
+
+.loginButton {
+    display: none;
+}
+
+ /*--- MOBILE NAVIGATION----*/
+ 
+ .burgerMenu {
+     width: 10%;
+     margin-left: 15px;
+ }
+
+ .burgerIcon {
+     display: flex;
+     justify-content: flex-end;
+     width: 100%;
+ }
+
+ .burgerIcon i {
+     font-size: 40px;
+     color: black;
+ }
+
+ .burgerLinksWrap {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 100vh;
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 90px;
+    right: -0px;
+}
+
+.burgerLinks a {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px;
+}
+
+.fa-chevron-down-one {
+    color: #FF5F0A;
+}
+
+.fa-chevron-down-two {
+    color: #870AA0;
+}
+
+.fa-chevron-down-three {
+    color: #FA1996;
+}
+
+/* almi invest a link*/
+
+.aI { 
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
+/* innerWrapBurger div (In english & log in)*/
+
+.innerWrapBurger {
+    display: flex;
+    flex-direction: column;
+}
+
+.innerWrapBurger a {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+}
+
+.innerWrapBurger .fa-globe,
+.innerWrapBurger .fa-lock {
+    padding-left: 0;
+    padding-right: 10px;
+    color: #FA1996;
+}
+
+/*---- DESKTOP NAVIGATION---*/
+
+.mainNav {
+    display: none;
+}
+
+.aOneWrap,
+.aTwoWrap,
+.aThreeWrap {
+    display: none;
+}
+
+ /*-----------HERO-------------*/
+
+ .hero {
+     display: flex;
+     justify-content: center;
+     width: 100vw;
+     height: 250px;
+     position: relative;
+ }
+
+ #heroImgWrap {
+     display: flex;
+     width: 100%;
+ }
+
+ .hero img {
+     width: 100%;
+     object-fit: cover;
+ }
+
+ .heroTextWrapper {
+     display: flex;
+     justify-content: center;
+     width: 100%;
+     height: 160px;
+     position: absolute;
+ }
+
+ .heroText {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     padding-left: 15px;
+     padding-right: 15px;
+     color: white;
+     background-color: rgba(0, 0, 0, 0.500);
+     z-index: 2222;
+ }
+
+ h1 {
+     margin-bottom: 10px;
+     font-weight: normal;
+     letter-spacing: 1px;
+ }
+
+ .hero span {
+     text-align: center;
+     letter-spacing: 1px;
+     width: 70%;
+ }
+
+ .applyForLoanButton {
+     width: 150px;
+     height: 50px;
+     margin-top: 15px;
+     color: white;
+     background: transparent;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+}
+
+
+/*--------------- SECTION LOAN OFFER--------------*/
+
+.loanOffer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px
+}
+
+.loanOfferSquares {
+    width: 100%;
+}
+.squareOneAndTwo {
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+.photoWrap {
+    height: 172px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.photoWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+    
+.loanAmount {
+    display: flex;
+    width: 100%;
+}
+
+.loanAmount  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.loanAmount li {
+    text-align: center;
+    padding: 10px;
+    width: 32%;
+    background-color: #FFCD32;
+    color: rgb(255, 255, 255);
+
+}
+
+/*----------USP WRAP--------*/
+
+.uspWrap {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.usps {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    
+}
+
+.usps ul {
+    padding-left: 15px;
+    height: 140px;
+}
+
+.usps ul li {
+    display: flex;
+    height: 30%;
+    padding: 10px;
+    
+}
+.usps ul li + img{
+    height: 100%;
+}
+
+.plusIcon {
+    padding-right: 15px;
+}
+
+/*----------USP PHOTO WOMAN--------*/
+
+
+
+/*---------FOR WHO / READ MORE BUTTON--------*/
+
+.forWhoWrap{
+    padding-top: 15px;
+}
+
+.forWho p {
+    line-height: 1.5;
+}
+
+.circleWrap {
+    display: none;
+}
+
+.readMoreWrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.readMoreButton {
+    width: 150px;
+    padding-top: 15px;
+}
+
+/*---------------- SECTION SOCIAL PROOFING ------------*/
+
+.socialProofing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.whyUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color:  #FF5F0A;
+}
+
+
+.whyUs h2,
+.whyUs p {
+    width: 100%;
+    color: white;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.whyUs h2 {
+    padding-top: 15px;
+}
+
+.whyUs p {
+    padding-bottom: 20px;
+}
+
+/*--------RECOMMENDATION-------*/
+
+.recommendation {
+    display: flex;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.rekoManWrap {
+    display: flex;
+    width: 50%;
+}
+
+#rekoManPhoto {
+  width: 100%;
+}
+
+.citWrap {
+    width: 100%;
+}
+
+.recommendation p {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+.citWrap span {
+    align-self: flex-end;
+}
+
+/*------------ ARTICLE NEWS-------------*/
+
+.news {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 20px 20px 20px;
+}
+
+#news1,
+#news2,
+#news3 {
+    background-color: #f2f2f2;
+    margin-bottom: 5px;
+}
+
+#news1 h3, #news1 p,
+#news2 h3, #news2 p,
+#news3 h3, #news3 p {
+    padding: 0px 15px 15px;
+}
+
+.newsImgWrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.icon {
+   height: 100%;
+   padding-bottom: 15px;
+}
+
+/*--------------------------------------*/
+/*------------- SECTION RIDER-----------*/
+
+.rider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    position: relative;
+}
+
+#riderImgWrap {
+    display: flex;
+    width: 100%;
+    height: 250px;
+}
+
+#riderImgWrap img {
+    width: 100%;
+}
+
+.applyForLoan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.500);
+    position: absolute;
+}
+.applyForLoan p {
+    text-align: center;
+}
+
+/*-----------------------------------*/
+/* ---------- SECTION INFO---------- */
+
+.infoWrap {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #870AA0;
+    padding: 30px;
+}
+
+.infoWrap h2 {
+    padding-bottom: 5px;
+}
+
+.infoWrap a {
+    line-height: 1.75;
+}
+
+.ourService,
+.aboutAlmi,
+.contact {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+/*----------------------------------- */
+/* --------- SOCIAL MEDIA ICONS------ */
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+}
+
+
+.socialMediaIcon {
+    font-size: 30px;
+    padding: 10px;
+}
+
+/* ----------------------------- */
+/* ***************************** */
+
+@media only screen and (min-width: 768px) {
+
+    /* GENERAL RULES */
+
+    p {font-size: 18px;}
+    li {font-weight: bold;}
+
+    
+
+    /* ---- HEADER MD-------- */
+
+    .logoWrap {
+        width: 50%;
+    }
+
+    .headerLinks {
+        width: 50%;
+    }
+
+    .english {
+        display: flex;
+        justify-content: center;
+    }   
+
+    .fa-search,
+    .fa-globe {
+        padding-left: 10px;
+    }
+
+    .mainNav_mobile {
+        width: fit-content;
+    }
+
+    /* ------------------------ */
+    /* --- SECTION LOAN OFFER MD-- */
+
+
+    .loanOfferSquares {
+        width: 100%;
+    }
+
+    .squareOneAndTwo {
+        flex-direction: row;
+    }
+
+
+    .photoWrap {
+        display: flex;
+        height: 250px;
+        min-width: 50%;
+        margin: 0;
+    }
+
+    .photoWrapMan {
+        width:50%;
+        padding-right: 5px;
+    }
+
+
+    /* ---- SQUARE 2 -AMOUNT MD ----- */
+
+    .loanAmount {
+        width: 50%;
+        padding-left: 5px;
+    }
+
+    .loanAmount ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #f2f2f2;
+        padding-bottom: 0;
+    }
+
+    .loanAmount li {
+        width: 80%;
+    }
+
+    /* -----SQUARE 3 -UPS MD ---------*/
+
+    .uspWrap {
+        flex-direction: row-reverse;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .usps {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-right: 5px;
+    }
+
+    .usps ul {
+        height: 200px;
+    }   
+
+    .usps li {
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .usps li img {
+        height: 100%;
+    }
+
+    
+    /* ---SQUARE 4 -IMG WOMAN MD-- */
+
+    .photoWrapWoman {
+        padding-left: 5px;
+    }
+
+    /* --------INFO FOR WHO MD---------- */
+
+    .forWho {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .forWhoWrap {
+        width: 75%;
+        padding-top: 40px;
+    }
+
+    .readMoreWrap {
+        justify-content: flex-start;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 40%;
+    }
+
+    .circleWrap {
+        display: flex;
+        width: 40%;
+        margin-bottom: -140px;
+        margin-right: -300px;
+    }
+
+    .circleWrap img {
+        width: 100%;
+    }
+
+    /* --- SECTION SOCIAL PROOFING MD -- */
+
+
+    .whyUs {
+        width: 100%;
+        font-size: 18px;
+        justify-content: center;
+        padding: 15px;
+        padding-left: 30%;
+    }
+    .whyUs h2 {
+        font-size: 35px;
+    }
+
+    /* -----RECOMMENDATION MD--------*/
+
+
+    .rekoManWrap img {
+        margin-top: -100px;
+    }
+    .recommendation p {
+        justify-content: center;
+        font-size: 20px;
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+
+    /* ----- ARTICLE NEWS MD------------ */
+
+    .slideWrap {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .news h2 {
+        display: flex;
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    #news1,
+    #news2,
+    #news3 {
+        width: 33%;
+        padding: 30px;
+    }
+
+    #news1,
+    #news2 {
+        margin-right: 10px;
+    }
+
+    /* ------- SECTION INFO MD--------- */
+
+    .infoWrap {
+        flex-direction: row ;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+}
+
+/* ********************************* */
+
+    @media only screen and (min-width: 900px) {
+
+        /* GENERAL RULES */
+
+        h1 {font-size: 50px;}
+        h2 {font-size: 30px; font-weight: bolde r;}
+        h3 {font-size: 20px;}
+        p {font-size: 20px;}
+        span {font-size: 20px;}
+        li {font-size: 20px;}
+        button {font-size: 18px;}
+
+        /* -------LD------ */
+
+        .headWrap,
+        .mainWrapper,
+        footer {
+            margin: auto;
+            max-width: 1317px;
+            padding: 0px 50px;
+        }
+        
+        /* ---- HEADER LINKS LD------- */
+
+        .search,
+        .loginButton {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .loginButton {
+            display: flex;
+            justify-content: flex-end;
+            height: 40px;
+            width: 10%;
+        }
+
+        /* --- DESKTOP NAVIGATION LD- */
+
+        .mainNavWrap {
+            width: 100vw;
+            background-color: white;
+            position: sticky;
+            top: 90px;
+            z-index: 9999;
+        }
+
+        .mainNav {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            height: 75px;
+            max-width: 1317px;
+            padding: 0px 50px;
+            margin: auto;
+            position: relative;
+        }
+
+        .mainNav a {
+            display: flex;
+            justify-content: flex-start;
+            font-size: 20px;
+            padding: 0px 64px 0px 0px;
+            text-decoration: none;
+        }
+        
+        .fa-chevron-down { /* arrows */
+            padding-left: 20px;
+        }
+
+        .fa-chevron-down-one {
+            color: #FF5F0A;
+        }
+
+        .fa-chevron-down-two {
+            color: #870AA0;
+        }
+
+        .fa-chevron-down-three {
+            color: #FA1996;
+        }
+
+        /* ---DROP NAV LD ------------ */
+
+        .mainNavDrop{
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            position: absolute; 
+        }
+
+        .mainNavDrop a {
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .aOneWrap.show,
+        .aTwoWrap.show,
+        .aThreeWrap.show {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1200px;
+            padding: 30px;
+            line-height: 1.5;
+            background-color: #870AA0;
+        }
+
+         /* ----aOne links ld --- */
+
+        .wantToGrow,
+        .service,
+        .seminar,
+        .seminarOnline,
+        .goTo {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            padding: 10px;
+            color: white;
+        }
+
+        /* -----aTwo links ld-- */
+
+        .knowledge {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            padding: 10px;
+        } 
+
+        /* ---aThree links ld-- */
+
+        .fact,
+        .career,
+        .sustainability,
+        .press,
+        .contacts {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 25%;
+            padding: 10px;
+            color: white;
+        }
+
+        /* -- MOBILE NAVIGATION------- */
+
+        .burgerMenu {
+            display: none;
+        }
+
+        /* ---- HERO LD--------------- */
+
+        .hero {
+            height: 450px;
+        }
+
+        .heroTextWrapper {
+            align-self: center;
+            justify-content: flex-start;
+            max-width: 1317px;
+            margin: auto;
+            margin-left: calc(61.5px + 50px);
+            height: 280px;  
+        }
+
+        .heroText {
+            width: 50%;
+            padding: 0;
+        }
+
+        /* ---SECTION LOAN OFFER LD----*/
+
+        .photoWrap {
+            height: 350px;
+        }
+
+        /* uspar */
+
+        .loanAmount li {
+            width: 80%;
+            padding: 15px;
+        }
+
+        .usps ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 250px;
+        }
+
+        .usps ul li {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        /* ----ARTICLE NEWS LD ------- */
+
+        #news1,
+        #news2 {
+            margin-right: 30px;
+        }
+
+        /* --------- RIDER LD----------*/
+
+        #riderImgWrap {
+            height: 400px;
+        }
+
+        .applyForLoan {
+            justify-content: center;
+            height: 300px;
+            width: 70%;
+        }
+
+        .applyForLoan p {
+            font-size: 18px;
+        }
+
+        /* ---- SECTION INFO LD------- */
+
+        .infoWrap {
+            justify-content: space-around;
+        }
+    }
