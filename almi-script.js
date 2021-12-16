@@ -10,6 +10,20 @@ const aTwoWrapEl = document.querySelector('.aTwoWrap');
 const aThreeEl = document.querySelector('.aThree');
 const aThreeWrapEl = document.querySelector('.aThreeWrap');
 
+const searchEl = document.querySelector('.search')
+const searchBarEl = document.querySelector('.searchBar')
+
+
+
+function searchFunction() {
+    
+    if (searchBarEl.style.display === "flex") {
+        searchBarEl.style.display = "none";
+    } else {
+        searchBarEl.style.display = "flex";
+    }
+}
+
 
 function burgerFunction() {
     const burgerLinksWrap = document.querySelector(".burgerLinksWrap");
@@ -20,6 +34,7 @@ function burgerFunction() {
         burgerLinksWrap.style.display = "flex";
     }
 }
+
 
 mainNavEl.forEach(link => {
     link.addEventListener('click', e => {
@@ -46,6 +61,5 @@ mainNavEl.forEach(link => {
             aThreeWrapEl.classList.remove('show');
         } 
     })
-
-
 });
+
