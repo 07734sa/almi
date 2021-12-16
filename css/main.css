@@ -396,8 +396,8 @@ main {
 .whyUs p {
     width: 100%;
     color: white;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .whyUs h2 {
@@ -458,7 +458,7 @@ main {
 #news2,
 #news3 {
     background-color: #f2f2f2;
-    margin-bottom: 15px;
+   
 
 }
 
@@ -944,7 +944,7 @@ main {
             justify-content: flex-start;
             max-width: 1317px;
             margin: auto;
-            margin-left: calc(61.5px + 50px);
+            margin-left: 100px;
             height: 280px;  
         }
 
