@@ -137,6 +137,10 @@ input {
      margin-left: 15px;
  }
 
+ .burgerMenu > a {
+    text-decoration: none;
+ }
+
  .burgerIcon {
      display: flex;
      justify-content: flex-end;
@@ -486,8 +490,6 @@ main {
 #news3 {
     background-color: #f2f2f2;
     margin-bottom: 5px;
-   
-
 }
 
 #news1 h3, 
