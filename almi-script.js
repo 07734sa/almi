@@ -1,5 +1,3 @@
-const headerEl = document.querySelector('headWrap')
-
 const mainNavEl = document.querySelectorAll('.mainNav');
 
 const mainNavDropEl = document.querySelector('.mainNavDrop');
