@@ -23,6 +23,7 @@ function searchFunction() {
         searchBarEl.style.display = "flex";
     }
 }
+TextDecoderStream()
 
 
 function burgerFunction() {
