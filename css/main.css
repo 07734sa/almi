@@ -932,11 +932,6 @@ main {
             color: white;
         }
 
-        .aOne:hover + .aOneWrap .show{
-            display:flex;
-        }
-
-
         /* -----aTwo links ld-- */
 
         .knowledge {
