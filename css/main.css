@@ -63,10 +63,13 @@ button:hover {cursor: pointer;}
      height: 100%;
  }
 
- .search {
-     justify-content: center;
+ .searchBtn {
+     display: flex;
+     justify-content: flex-end;
      flex-direction: row;
      width: 100%;
+     font-size: 18px;
+     border: none;
      position: relative;
  }
 
@@ -82,8 +85,12 @@ button:hover {cursor: pointer;}
 
 /* search field */
 
-.searchBar{
+.searchBar {
     display: none;
+}
+
+.showSearchBar{
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -924,6 +931,11 @@ main {
             padding: 10px;
             color: white;
         }
+
+        .aOne:hover + .aOneWrap .show{
+            display:flex;
+        }
+
 
         /* -----aTwo links ld-- */
 

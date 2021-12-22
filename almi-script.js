@@ -10,60 +10,52 @@ const aTwoWrapEl = document.querySelector('.aTwoWrap');
 const aThreeEl = document.querySelector('.aThree');
 const aThreeWrapEl = document.querySelector('.aThreeWrap');
 
-const searchEl = document.querySelector('.search')
+const searchBtnEl = document.querySelector('.searchBtn')
 const searchBarEl = document.querySelector('.searchBar')
 
 const toggleButton = document.querySelector('.toggleButton');
 const burgerLinksWrap = document.querySelector('.burgerLinksWrap');
 
 
-
-toggleButton.addEventListener('click', function (){
+//mobile navigation
+toggleButton.addEventListener('click', () => {
     //console.log(burgerLinksWrap.classList)
     burgerLinksWrap.classList.toggle('showLinks')
 });
 
-function searchFunction() {
-    if (searchBarEl.style.display === "flex") {
-        searchBarEl.style.display = "none";
-    } else {
-        searchBarEl.style.display = "flex";
-    }
-}
-    mainNavEl.forEach(link => {
-        link.addEventListener('click', e => {
-            e.preventDefault()
+//search bar
+searchBtnEl.addEventListener('click', () => {
+    searchBarEl.classList.toggle('showSearchBar')
+})
 
-            if (e.target === aOneEl) {
-                aOneWrapEl.classList.add('show');  
-                console.log(e.target)
-                
-            }   else if (e.target !== aOneEl) {
-                aOneWrapEl.classList.remove('show');  
-            }    
-            
-            if (e.target === aTwoEl) {
-                aTwoWrapEl.classList.add('show');
+//desktop navigation
+mainNavEl.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault()
 
-            }   else if (e.target !== aTwoEl) {
-                aTwoWrapEl.classList.remove('show');
-            }   
-            
-            if (e.target === aThreeEl) {
-                aThreeWrapEl.classList.add('show');
+        if (e.target === aOneEl) {
+            aOneWrapEl.classList.toggle('show'); 
 
-            }   else if (e.target !== aThreeEl) {
-                aThreeWrapEl.classList.remove('show');
+        }   else {
+            aOneWrapEl.classList.remove('show');
+        }
 
-            }  
-        });
+        if (e.target === aTwoEl) {
+            aTwoWrapEl.classList.toggle('show');
 
+        }   else {
+            aTwoWrapEl.classList.remove('show');
+        }
+        
+        if (e.target === aThreeEl) {
+            aThreeWrapEl.classList.toggle('show');
+
+        }   else {
+            aThreeWrapEl.classList.remove('show');
+        }  
     });
+});   
    
-
-
-
-
 
 
 
