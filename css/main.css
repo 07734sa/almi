@@ -120,30 +120,32 @@ input {
      margin-left: 15px;
  }
 
- .burgerMenu > a {
-    text-decoration: none;
- }
-
- .burgerIcon {
+ .toggleButton {
      display: flex;
      justify-content: flex-end;
      width: 100%;
+     border: none;
  }
 
- .burgerIcon i {
+ .burgerIcon {
      font-size: 40px;
      color: black;
  }
 
  .burgerLinksWrap {
-    display: none;
+     height: 0;
+     overflow: hidden; 
+ }
+
+ .showLinks {
+    display: flex;
     flex-direction: column;
     width: 80vw;
     height: 100vh;
     background-color: #f2f2f2;
     position: absolute;
     top: 90px;
-    right: -0px;
+    right: 0;
 }
 
 .burgerLinks a {
@@ -613,8 +615,8 @@ main {
         padding-left: 10px;
     }
 
-    .mainNav_mobile {
-        width: fit-content;
+    .showLinks {
+        transition: 0.3s;
     }
 
     /* ------------------------ */
@@ -751,6 +753,7 @@ main {
     .rekoManWrap img {
         margin-top: -100px;
     }
+
     .recommendation p {
         justify-content: center;
         font-size: 20px;
@@ -1020,12 +1023,12 @@ main {
             margin-left: 0;
             margin-right: 0;
         }
+
         #news1,
         #news2 {
             margin-right: 30px;
         }
 
-    
         /* --------- RIDER LD----------*/
 
         #riderImgWrap {
