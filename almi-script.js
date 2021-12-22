@@ -10,58 +10,52 @@ const aTwoWrapEl = document.querySelector('.aTwoWrap');
 const aThreeEl = document.querySelector('.aThree');
 const aThreeWrapEl = document.querySelector('.aThreeWrap');
 
-const searchEl = document.querySelector('.search')
+const searchBtnEl = document.querySelector('.searchBtn')
 const searchBarEl = document.querySelector('.searchBar')
 
+const toggleButton = document.querySelector('.toggleButton');
+const burgerLinksWrap = document.querySelector('.burgerLinksWrap');
 
 
-function searchFunction() {
-    
-    if (searchBarEl.style.display === "flex") {
-        searchBarEl.style.display = "none";
-    } else {
-        searchBarEl.style.display = "flex";
-    }
-}
+//mobile navigation
+toggleButton.addEventListener('click', () => {
+    //console.log(burgerLinksWrap.classList)
+    burgerLinksWrap.classList.toggle('showLinks')
+});
 
+//search bar
+searchBtnEl.addEventListener('click', () => {
+    searchBarEl.classList.toggle('showSearchBar')
+})
 
-function burgerFunction() {
-    const burgerLinksWrap = document.querySelector(".burgerLinksWrap");
-    
-    if (burgerLinksWrap.style.display === "flex") {
-        burgerLinksWrap.style.display = "none";
-    } else {
-        burgerLinksWrap.style.display = "flex";
-    }
-}
-
-
+//desktop navigation
 mainNavEl.forEach(link => {
-
     link.addEventListener('click', e => {
-            
         e.preventDefault()
 
         if (e.target === aOneEl) {
-            aOneWrapEl.classList.add('show');  
-            
-        }   else if (e.target !== aOneEl) {
-             aOneWrapEl.classList.remove('show');  
-        }    
-        
-        if (e.target === aTwoEl) {
-            aTwoWrapEl.classList.add('show');
+            aOneWrapEl.classList.toggle('show'); 
 
-        }   else if (e.target !== aTwoEl) {
+        }   else {
+            aOneWrapEl.classList.remove('show');
+        }
+
+        if (e.target === aTwoEl) {
+            aTwoWrapEl.classList.toggle('show');
+
+        }   else {
             aTwoWrapEl.classList.remove('show');
-        }   
+        }
         
         if (e.target === aThreeEl) {
-            aThreeWrapEl.classList.add('show');
+            aThreeWrapEl.classList.toggle('show');
 
-        }   else if (e.target !== aThreeEl) {
+        }   else {
             aThreeWrapEl.classList.remove('show');
-        } 
-    })
-});
+        }  
+    });
+});   
+   
+
+
 
