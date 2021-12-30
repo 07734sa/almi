@@ -1,6 +1,5 @@
 const mainNavEl = document.querySelectorAll('.mainNav');
 
-const mainNavDropEl = document.querySelector('.mainNavDrop');
 const aOneEl= document.querySelector('.aOne');
 const aOneWrapEl = document.querySelector('.aOneWrap');
 
@@ -13,14 +12,14 @@ const aThreeWrapEl = document.querySelector('.aThreeWrap');
 const searchBtnEl = document.querySelector('.searchBtn')
 const searchBarEl = document.querySelector('.searchBar')
 
-const toggleButton = document.querySelector('.toggleButton');
-const burgerLinksWrap = document.querySelector('.burgerLinksWrap');
+const toggleButtonEl = document.querySelector('.toggleButton');
+const burgerLinksWrapEl = document.querySelector('.burgerLinksWrap');
 
 
 //mobile navigation
-toggleButton.addEventListener('click', () => {
+toggleButtonEl.addEventListener('click', () => {
     //console.log(burgerLinksWrap.classList)
-    burgerLinksWrap.classList.toggle('showLinks')
+    burgerLinksWrapEl.classList.toggle('showLinks')
 });
 
 //search bar
@@ -36,7 +35,7 @@ mainNavEl.forEach(link => {
         if (e.target === aOneEl) {
             aOneWrapEl.classList.toggle('show'); 
 
-        }   else {
+        }   else {// Prevents showing all dropNavs at the same time when toggle
             aOneWrapEl.classList.remove('show');
         }
 
