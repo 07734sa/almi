@@ -36,8 +36,8 @@ mainNavEl.forEach(link => {
         if (e.target === aOneEl) {
             aOneWrapEl.classList.toggle('show'); 
 
-        }   else {
-            aOneWrapEl.classList.remove('show');
+        }   else {//prevents you from seeing all dropNavs at the same time if you toggles between the links
+            aOneWrapEl.classList.remove('show'); 
         }
 
         if (e.target === aTwoEl) {
