@@ -13,14 +13,30 @@ const aThreeWrapEl = document.querySelector('.aThreeWrap');
 const searchBtnEl = document.querySelector('.searchBtn')
 const searchBarEl = document.querySelector('.searchBar')
 
-const toggleButton = document.querySelector('.toggleButton');
+const burgerBtnEl = document.querySelector('.burgerIcon');
 const burgerLinksWrap = document.querySelector('.burgerLinksWrap');
 
+const removeShowDivEl = document.querySelector('.removeShowDiv');
 
-//mobile navigation
-toggleButton.addEventListener('click', () => {
-    //console.log(burgerLinksWrap.classList)
-    burgerLinksWrap.classList.toggle('showLinks')
+
+
+ //mobile navigation
+burgerBtnEl.addEventListener('click', e => {
+    console.log(e.target)
+    if (e.target === burgerBtnEl) {
+        burgerLinksWrap.classList.add('showLinks');
+        removeShowDivEl.classList.add('show');
+    }
+});
+
+//make it possible to click outside thex element to close it.
+removeShowDivEl.addEventListener('click', e => {
+    e.preventDefault();
+
+    if (e.target === removeShowDivEl || e.target === burgerBtnEl) {
+        burgerLinksWrap.classList.remove('showLinks');
+        removeShowDivEl.classList.remove('show');
+    }
 });
 
 //search bar
