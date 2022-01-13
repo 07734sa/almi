@@ -20,54 +20,64 @@ const removeShowDivEl = document.querySelector('.removeShowDiv');
 
 
 
+//Click outside element to close.
+const closeDiv = function (element) {
+    removeShowDivEl.addEventListener('click', e => {
+        
+        if (e.target === removeShowDivEl) {
+            element.classList.remove('show');
+            removeShowDivEl.classList.remove('show');
+        }
+    })
+};
+
  //mobile navigation
 burgerBtnEl.addEventListener('click', e => {
-    console.log(e.target)
+
     if (e.target === burgerBtnEl) {
-        burgerLinksWrap.classList.add('showLinks');
+        burgerLinksWrap.classList.toggle('show');
         removeShowDivEl.classList.add('show');
+        closeDiv(burgerLinksWrap);
     }
 });
 
-//make it possible to click outside thex element to close it.
-removeShowDivEl.addEventListener('click', e => {
-    e.preventDefault();
+searchBtnEl.addEventListener('click', e => {
+    removeShowDivEl.classList.add('show');
 
-    if (e.target === removeShowDivEl || e.target === burgerBtnEl) {
-        burgerLinksWrap.classList.remove('showLinks');
-        removeShowDivEl.classList.remove('show');
-    }
+    if (e.target === searchBtnEl) {
+        searchBarEl.classList.toggle('show');
+        closeDiv(searchBarEl)
+    }    
 });
-
-//search bar
-searchBtnEl.addEventListener('click', () => {
-    searchBarEl.classList.toggle('showSearchBar')
-})
 
 //desktop navigation
 mainNavEl.forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault()
+        removeShowDivEl.classList.add('show');
 
         if (e.target === aOneEl) {
-            aOneWrapEl.classList.toggle('show'); 
-
-        }   else {//prevents you from seeing all dropNavs at the same time if you toggles between the links
-            aOneWrapEl.classList.remove('show'); 
+             aOneWrapEl.classList.toggle('show');
+                
+        }   else {
+            aOneWrapEl.classList.remove('show');
+            closeDiv(aOneWrapEl);
         }
-
+    
         if (e.target === aTwoEl) {
             aTwoWrapEl.classList.toggle('show');
 
         }   else {
             aTwoWrapEl.classList.remove('show');
+            closeDiv(aTwoWrapEl);
         }
-        
+            
         if (e.target === aThreeEl) {
             aThreeWrapEl.classList.toggle('show');
-
+    
         }   else {
             aThreeWrapEl.classList.remove('show');
+            closeDiv(aThreeWrapEl);
         }  
     });
 });   
